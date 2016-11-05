@@ -30,8 +30,8 @@ expr
 	
 condition
 	:expr comparing expr
-	|condition logic condition
-	|expr
+	|expr comparing expr AND expr comparing expr
+	|expr comparing expr OR expr comparing expr
 	|'('condition')'
 	;
 comparing
@@ -41,10 +41,6 @@ comparing
 	| '!''=' 
 	| '<' 
 	| '>' 
-	;
-logic
-	:AND
-	|OR
 	;
 	
 	
